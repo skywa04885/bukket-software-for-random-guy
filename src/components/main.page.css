@@ -1,0 +1,38 @@
+.main-inquiry__next {
+    padding: 0.7rem;
+    background-color: #020202;
+    color: #f5f5f5;
+    font-size: 1.1rem;
+    border-radius: 0.8rem 0.2rem 0.8rem 0.2rem;
+    border: none;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all .12s;
+    outline: none;
+}
+
+.main-inquiry__context {
+    margin: 1rem;
+    display: block;
+    color: #454545;
+}
+
+.main-inquiry__next:hover {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-inquiry__answer__list-item:not(:last-child) {
+    margin-bottom: 0.3rem;
+}
+
+.main-inquiry__answer__list-item > label {
+    width: 12rem;
+    display: inline-block;
+    color: #323232;
+    cursor: pointer;
+    user-select: none;
+}
+
+.main-inquiry__answer {
+    padding: 1rem;
+}
