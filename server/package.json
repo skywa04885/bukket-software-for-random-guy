@@ -13,6 +13,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^3.21.3",
     "nodemailer": "^6.4.2",
     "nodemailer-direct-transport": "^3.3.2"
   }

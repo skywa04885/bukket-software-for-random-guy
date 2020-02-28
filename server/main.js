@@ -3,6 +3,7 @@ const bp = require("body-parser");
 const nm = require("nodemailer");
 const cors = require("cors");
 const nmdp =  require("nodemailer-direct-transport");
+const hm = require("helmet");
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(bp.urlencoded({
 	extended: false
 }));
+app.use(hm());
 
 const transporter = nm.createTransport(nmdp({}));
 
@@ -40,12 +42,15 @@ app.post("/submit", (req, res, next) => {
 		to: "Luke Rieff <luke.rieff@gmail.com>",
 		subject: "Nieuw formulier entry ...",
 		text: `
-			Klachten: ${q1_klachten}
-			Pijn schaal 0/10: ${q2_pijn_schaal}
-			Meer of minder dan 3 weken: ${q3_meer_minder_weken}
-			Toegenomen of afgenomen: ${q4_toegenomen_afgenomen}
-			Wat heb je zelf gedaan: ${q5_wat_zelf_gedaan}
-			Contact gegevens: ${q6_contact_data}
+Geachte Boris,
+
+Hierbij heb ik een nieuw ingevuld formulier:
+- Klachten: ${q1_klachten}
+- Pijn schaal 0/10: ${q2_pijn_schaal}
+- Meer of minder dan 3 weken: ${q3_meer_minder_weken}
+- Toegenomen of afgenomen: ${q4_toegenomen_afgenomen}
+- Wat heb je zelf gedaan: ${q5_wat_zelf_gedaan}
+- Contact gegevens: ${q6_contact_data}
 		`
 	}, (error, info) => {
 		if (error) {

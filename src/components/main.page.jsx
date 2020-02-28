@@ -67,7 +67,7 @@ class MainPage extends Component {
             // Updates the current state
             this.setState({
                 currentQuestion: new Question(
-                    "Hey ? {name} Wat vervelend dat je klachten hebt. Ik zou graag wat meer inzicht willen hebben in jou en je klachten, om te kijken of je in aanmerking komt voor een gratis fysiocheck.\nDit duurt ongeveer 2 mintuutjes\nWaar heb je momenteel de meeste klachten?",
+                    "Hey ? Wat vervelend dat je klachten hebt. Ik zou graag wat meer inzicht willen hebben in jou en je klachten, om te kijken of je in aanmerking komt voor een gratis fysiocheck.\nDit duurt ongeveer 2 mintuutjes\nWaar heb je momenteel de meeste klachten?",
                     QuestionTypes.CheckBoxArray,
                     0,
                     [
@@ -80,7 +80,7 @@ class MainPage extends Component {
             }, () => { // Once it is finished
                 console.log("Initial question showing ...");
             });
-        }, 1000);
+        }, 250);
     }
 
     renderQuestionFields = question => {
@@ -373,7 +373,7 @@ class MainPage extends Component {
         }
 
         // Inserts the name
-        currentQuestion.context = currentQuestion.context.replace("{name}", "Luke Rieff");
+        // currentQuestion.context = currentQuestion.context.replace("{name}", "Luke Rieff");
 
         // Returns the main item
         return (
@@ -388,7 +388,7 @@ class MainPage extends Component {
                         <div className="main-inquiry__answer">
                             {this.renderQuestionFields(currentQuestion)}
                         </div>
-                        <button type="submit" className="main-inquiry__next">Volgende vraag</button>
+                        <button type="submit" className="main-inquiry__next">Volgende</button>
                     </div>
                 ) }
             </form>

@@ -6,7 +6,10 @@ import Main from "./components/main.page";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
+        <div className="app-header">
+          <h1>Korte klachten check</h1>
+        </div>
         <Main />
       </div>
     );

@@ -2,10 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #e2e2e2;
+  margin: 0;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.8);
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.loading {
+  display: block;
+  margin: 1rem;
+  color: #232323;
+  font-size: 1.3rem;
 }

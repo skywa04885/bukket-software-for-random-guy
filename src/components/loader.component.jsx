@@ -7,7 +7,7 @@ class Loader extends Component {
 
     render() {
         return (
-            <p>Loading ...</p>
+            <p class="loading">Loading ...</p>
         );
     }
 }
